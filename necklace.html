@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necklaces</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .add-to-cart-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #a0522d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Necklaces Collection</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="product-list">
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71S1K3rL8aL._AC_UY625_.jpg" alt="Gold Pendant Necklace">
+            <h2>Gold Pendant Necklace</h2>
+            <p class="price"><span class="current-price">$200</span> <span class="old-price">$250</span></p>
+            <p>Elegant gold pendant with intricate design.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Gold Pendant Necklace', 200, 'https://m.media-amazon.com/images/I/71S1K3rL8aL._AC_UY625_.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://cdn.shopify.com/s/files/1/0404/2802/8511/products/necklace_silver_800x.jpg" alt="Silver Heart Necklace">
+            <h2>Silver Heart Necklace</h2>
+            <p class="price"><span class="current-price">$120</span> <span class="old-price">$150</span></p>
+            <p>Beautiful silver heart-shaped pendant.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Silver Heart Necklace', 120, 'https://cdn.shopify.com/s/files/1/0404/2802/8511/products/necklace_silver_800x.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/81T8xV8jZ4L._AC_UY625_.jpg" alt="Pearl Necklace">
+            <h2>Pearl Necklace</h2>
+            <p class="price"><span class="current-price">$160</span> <span class="old-price">$200</span></p>
+            <p>Classic pearl necklace for a timeless look.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pearl Necklace', 160, 'https://m.media-amazon.com/images/I/81T8xV8jZ4L._AC_UY625_.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://cdn.shopify.com/s/files/1/0575/5282/6663/products/rose_gold_necklace_800x.jpg" alt="Rose Gold Necklace">
+            <h2>Rose Gold Necklace</h2>
+            <p class="price"><span class="current-price">$180</span> <span class="old-price">$220</span></p>
+            <p>Modern rose gold necklace for any occasion.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Rose Gold Necklace', 180, 'https://cdn.shopify.com/s/files/1/0575/5282/6663/products/rose_gold_necklace_800x.jpg')">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Jewellery Store. All rights reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price, image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " has been added to your cart!");
+}
+</script>
+
+</body>
+</html>

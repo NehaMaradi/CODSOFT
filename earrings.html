@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Button Styling */
+        .add-to-cart-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #a0522d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Earrings Collection</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="product-list">
+        <div class="product-item">
+            <img src="https://purplesecret.in/cdn/shop/files/10_8.jpg?v=1719388644" alt="Gold Hoop Earrings">
+            <h2>Gold Hoop Earrings</h2>
+            <p class="price"><span class="current-price">$120</span> <span class="old-price">$150</span></p>
+            <p>Elegant gold hoops for every occasion.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Gold Hoop Earrings', 120, 'https://purplesecret.in/cdn/shop/files/10_8.jpg?v=1719388644')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://jewelbox.co.in/wp-content/uploads/2024/05/WER0248-1-1.jpg" alt="Diamond Studs">
+            <h2>Diamond Studs</h2>
+            <p class="price"><span class="current-price">$180</span> <span class="old-price">$220</span></p>
+            <p>Classic diamond studs for a timeless look.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Diamond Studs', 180, 'https://jewelbox.co.in/wp-content/uploads/2024/05/WER0248-1-1.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://assets.ajio.com/medias/sys_master/root/20230516/MTWm/646388bf42f9e729d78c8fc8/-473Wx593H-466160475-gold-MODEL.jpg" alt="Pearl Drop Earrings">
+            <h2>Pearl Drop Earrings</h2>
+            <p class="price"><span class="current-price">$95</span> <span class="old-price">$120</span></p>
+            <p>Beautiful pearl drops for elegant evenings.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pearl Drop Earrings', 95, 'https://assets.ajio.com/medias/sys_master/root/20230516/MTWm/646388bf42f9e729d78c8fc8/-473Wx593H-466160475-gold-MODEL.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://estele.co/cdn/shop/files/1_d2df4cb7-755e-435f-b23c-29a6a36dcb23.jpg?v=1711694488" alt="Rose Gold Earrings">
+            <h2>Rose Gold Earrings</h2>
+            <p class="price"><span class="current-price">$140</span> <span class="old-price">$175</span></p>
+            <p>Stylish rose gold finish for modern elegance.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Rose Gold Earrings', 140, 'https://estele.co/cdn/shop/files/1_d2df4cb7-755e-435f-b23c-29a6a36dcb23.jpg?v=1711694488')">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Jewellery Store. All rights reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price, image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " has been added to your cart!");
+}
+</script>
+
+</body>
+</html>

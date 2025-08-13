@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b, #e0e0e0);
+    color: #fdfdfd;
+}
+
+/* Universal Fixed Image Size */
+img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+header h1 {
+    margin: 0;
+    color: #1b263b;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+    color: #a0522d;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.category,
+.product-item {
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category:hover,
+.product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category h3 {
+    margin: 10px 0;
+    color: #f7f2f0;
+}
+
+/* Product List - Horizontal Layout */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.product-item {
+    width: 180px;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.product-item img {
+    margin-bottom: 10px;
+}
+
+.product-item h2 {
+    font-size: 0.95rem;
+    min-height: 40px; /* keeps titles aligned */
+    color: #a0522d;
+}
+
+.price {
+    margin: 5px 0;
+}
+
+.current-price {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.old-price {
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.product-item p {
+    font-size: 0.85rem;
+    color: #555;
+    min-height: 40px; /* keeps descriptions aligned */
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #000; /* Changed text color to black */
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #eee;
+}
+
+.hero{
+    text-align: center;
+}/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 12px; /* spacing between fields */
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical; /* allows user to make it taller */
+    min-height: 100px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #a0522d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #8b4513;
+}
+/* Offer Bar */
+.offer-bar {
+    background-color: #a0522d;
+    color: white;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Hero with Background Image */
+.hero {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1600181955684-c8d2d06f4d0a?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: #f8f8f8;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero-overlay h2 {
+    color: rgb(19, 12, 12);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    color: #140808;
+    font-size: 1.2rem;
+}
+/* Offer Bar */
+.offer-bar {
+    background-color: #274060; /* Medium dark blue */
+    color: #ffffff; /* White text for contrast */
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}

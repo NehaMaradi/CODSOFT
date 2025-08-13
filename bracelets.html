@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracelets</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Button Styling */
+        .add-to-cart-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #a0522d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bracelets Collection</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="cart.html">Cart 🛒</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="product-list">
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/bb/63/83/bb6383a459b5f52b721d776845614e31.jpg" alt="Gold Chain Bracelet">
+            <h2>Gold Chain Bracelet</h2>
+            <p class="price"><span class="current-price">$150</span> <span class="old-price">$180</span></p>
+            <p>Elegant gold chain bracelet for everyday wear.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Gold Chain Bracelet', 150, 'https://m.media-amazon.com/images/I/71zm3B1MDoL._AC_UY625_.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://karizmajewels.com/cdn/shop/files/brcltsm28.jpg?v=1734937502&width=1080" alt="Silver Charm Bracelet">
+            <h2>Silver Charm Bracelet</h2>
+            <p class="price"><span class="current-price">$85</span> <span class="old-price">$110</span></p>
+            <p>Stylish silver bracelet with charming pendants.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Silver Charm Bracelet', 85, 'https://cdn.shopify.com/s/files/1/0575/5282/6663/products/bracelet_1_800x.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.etsystatic.com/32325291/r/il/c9e1c8/5319405705/il_570xN.5319405705_j9up.jpg" alt="Pearl Bead Bracelet">
+            <h2>Pearl Bead Bracelet</h2>
+            <p class="price"><span class="current-price">$95</span> <span class="old-price">$130</span></p>
+            <p>Classic pearl beads for timeless elegance.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pearl Bead Bracelet', 95, 'https://m.media-amazon.com/images/I/71R0vH0mZPL._AC_UY625_.jpg')">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/51Z8cf73odL._AC_SY200_QL15_.jpg" alt="Rose Gold Bracelet">
+            <h2>Rose Gold Bracelet</h2>
+            <p class="price"><span class="current-price">$140</span> <span class="old-price">$170</span></p>
+            <p>Stylish rose gold bracelet for modern elegance.</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Rose Gold Bracelet', 140, 'https://cdn.shopify.com/s/files/1/0404/2802/8511/products/bracelet_rose_800x.jpg')">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Jewellery Store. All rights reserved.</p>
+</footer>
+
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price, image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " has been added to your cart!");
+}
+</script>
+
+</body>
+</html>
